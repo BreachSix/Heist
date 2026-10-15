@@ -4079,10 +4079,10 @@ const LEVEL_I18N = {"en": {"1": {"name": "Level 1 · Bank Branch", "sub": "Easy 
   // environnement comme sur Tactical Squad — les 4 clés sont conservées
   // pour la compatibilité du moteur mais pointent toutes vers le même visuel.
   const ENV_OPERATOR_IMG = {
-    urbain: './op-assault.jpg',
-    desert: './op-assault.jpg',
-    jungle: './op-assault.jpg',
-    arctique: './op-assault.jpg',
+    urbain: './op-assault.png',
+    desert: './op-assault.png',
+    jungle: './op-assault.png',
+    arctique: './op-assault.png',
   };
   // Variantes du portrait de briefing par skin d'arme débloqué (Assault
   // seulement — c'est la seule classe montrée en briefing, et la seule à
@@ -4091,10 +4091,10 @@ const LEVEL_I18N = {"en": {"1": {"name": "Level 1 · Bank Branch", "sub": "Easy 
   // Même visuel d'opérateur peu importe l'environnement (voir ENV_OPERATOR_IMG) ;
   // seule la variante de skin d'arme change le portrait de briefing.
   const ENV_OPERATOR_IMG_SKINNED = {
-    urbain: { crimson: './op-assault-crimson.jpg', arctic: './op-assault-arctic.jpg', vault: './op-assault-vault.jpg', casino: './op-assault-casino.jpg', legion: './op-assault-legion.jpg', gold: './op-assault-gold.jpg' },
-    desert: { crimson: './op-assault-crimson.jpg', arctic: './op-assault-arctic.jpg', vault: './op-assault-vault.jpg', casino: './op-assault-casino.jpg', legion: './op-assault-legion.jpg', gold: './op-assault-gold.jpg' },
-    jungle: { crimson: './op-assault-crimson.jpg', arctic: './op-assault-arctic.jpg', vault: './op-assault-vault.jpg', casino: './op-assault-casino.jpg', legion: './op-assault-legion.jpg', gold: './op-assault-gold.jpg' },
-    arctique: { crimson: './op-assault-crimson.jpg', arctic: './op-assault-arctic.jpg', vault: './op-assault-vault.jpg', casino: './op-assault-casino.jpg', legion: './op-assault-legion.jpg', gold: './op-assault-gold.jpg' },
+    urbain: { crimson: './op-assault-crimson.png', arctic: './op-assault-arctic.png', vault: './op-assault-vault.png', casino: './op-assault-casino.png', legion: './op-assault-legion.png', gold: './op-assault-gold.png' },
+    desert: { crimson: './op-assault-crimson.png', arctic: './op-assault-arctic.png', vault: './op-assault-vault.png', casino: './op-assault-casino.png', legion: './op-assault-legion.png', gold: './op-assault-gold.png' },
+    jungle: { crimson: './op-assault-crimson.png', arctic: './op-assault-arctic.png', vault: './op-assault-vault.png', casino: './op-assault-casino.png', legion: './op-assault-legion.png', gold: './op-assault-gold.png' },
+    arctique: { crimson: './op-assault-crimson.png', arctic: './op-assault-arctic.png', vault: './op-assault-vault.png', casino: './op-assault-casino.png', legion: './op-assault-legion.png', gold: './op-assault-gold.png' },
   };
   function getBriefingOperatorImg(env) {
     const skin = getEquippedSkin();
@@ -4117,29 +4117,29 @@ const LEVEL_I18N = {"en": {"1": {"name": "Level 1 · Bank Branch", "sub": "Easy 
   // Portrait d'ennemi selon le lieu du niveau (image de briefing) : plus le
   // lieu est prestigieux, plus la riposte d'Unit Meridian est lourde.
   const ENEMY_BY_BRIEF = {
-    './brief-banque.jpg': './enemy-guard.jpg',
-    './brief-bijouterie.jpg': './enemy-guard.jpg',
-    './brief-casino.jpg': './enemy-police.jpg',
-    './brief-musee.jpg': './enemy-guard.jpg',
-    './brief-depot.jpg': './enemy-police.jpg',
-    './brief-courtage.jpg': './enemy-federal.jpg',
-    './brief-galerie.jpg': './enemy-police.jpg',
-    './brief-hotel.jpg': './enemy-federal.jpg',
-    './brief-port.jpg': './enemy-federal.jpg',
-    './brief-siege-banque.jpg': './enemy-swat.jpg',
-    './brief-lingots.jpg': './enemy-swat.jpg',
-    './brief-meridian.jpg': './enemy-swat.jpg',
+    './brief-banque.jpg': './enemy-guard.png',
+    './brief-bijouterie.jpg': './enemy-guard.png',
+    './brief-casino.jpg': './enemy-police.png',
+    './brief-musee.jpg': './enemy-guard.png',
+    './brief-depot.jpg': './enemy-police.png',
+    './brief-courtage.jpg': './enemy-federal.png',
+    './brief-galerie.jpg': './enemy-police.png',
+    './brief-hotel.jpg': './enemy-federal.png',
+    './brief-port.jpg': './enemy-federal.png',
+    './brief-siege-banque.jpg': './enemy-swat.png',
+    './brief-lingots.jpg': './enemy-swat.png',
+    './brief-meridian.jpg': './enemy-swat.png',
   };
   function getEnemyImgForLevel(env, levelId) {
     const def = levelDefs[levelId];
-    return (def && ENEMY_BY_BRIEF[def.briefImg]) || './enemy-guard.jpg';
+    return (def && ENEMY_BY_BRIEF[def.briefImg]) || './enemy-guard.png';
   }
   const CLASS_ENV_OPERATOR_IMG = {
     Assault: ENV_OPERATOR_IMG,
-    Heavy: { urbain: './op-heavy.jpg', desert: './op-heavy.jpg', jungle: './op-heavy.jpg', arctique: './op-heavy.jpg' },
-    Light: { urbain: './op-light.jpg', desert: './op-light.jpg', jungle: './op-light.jpg', arctique: './op-light.jpg' },
+    Heavy: { urbain: './op-heavy.png', desert: './op-heavy.png', jungle: './op-heavy.png', arctique: './op-heavy.png' },
+    Light: { urbain: './op-light.png', desert: './op-light.png', jungle: './op-light.png', arctique: './op-light.png' },
   };
-  const SHADOW_OPERATOR_IMG = './op-shadow.jpg';
+  const SHADOW_OPERATOR_IMG = './op-shadow.png';
   const KUKRI_STANDARD_IMG = './milestone-tier0-standard.jpg'; // kukri au palier 0, avant tout déblocage
   function getOperatorPortrait(cls, env) {
     if (cls === 'Shadow') return SHADOW_OPERATOR_IMG;

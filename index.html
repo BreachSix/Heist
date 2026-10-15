@@ -20,21 +20,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #101115;
-    --panel: #181a20;
-    --panel-2: #21242c;
-    --wall: #4a4e5a;
-    --floor: #2b2f38;
-    --amber: #d4af37;
-    --amber-dim: #8a7021;
-    --squad-a: #d4af37;
-    --squad-b: #b4475a;
+    --bg: #14090d;
+    --panel: #1f1217;
+    --panel-2: #2c1822;
+    --wall: #5a3f4a;
+    --floor: #2f1e25;
+    --amber: #e2b94a;
+    --amber-dim: #8c6a1c;
+    --squad-a: #e2b94a;
+    --squad-b: #c0455f;
     --danger: #c4453a;
     --ok: #5f9a6a;
     --enemy: #3d5f94;
     --enemy-dark: #14243f;
-    --text: #ece8de;
-    --text-dim: #9b9a93;
+    --text: #f1e8dd;
+    --text-dim: #a89a9c;
     --font-head: 'Oswald', 'Arial Narrow', sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
   }
@@ -43,7 +43,7 @@
   body.colorblind { --danger: #d97706; --ok: #2b7fb8; }
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
-      --bg: #101115; --panel: #181a20; --text: #ece8de;
+      --bg: #14090d; --panel: #1f1217; --text: #f1e8dd;
     }
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -79,13 +79,13 @@
     background: transparent; border: 1px solid var(--amber-dim); color: var(--amber);
     padding: 5px 10px; border-radius: 4px; cursor: pointer;
   }
-  .compose-btn.active { background: var(--amber); color: #2a2410; border-color: var(--amber); }
+  .compose-btn.active { background: var(--amber); color: #2a1208; border-color: var(--amber); }
   .lang-btn {
     font-family: var(--font-head); font-size: 0.62rem; letter-spacing: 0.03em;
     background: transparent; border: 1px solid var(--amber-dim); color: var(--amber);
     padding: 5px 4px; border-radius: 4px; cursor: pointer;
   }
-  .lang-btn.active { background: var(--amber); color: #2a2410; border-color: var(--amber); }
+  .lang-btn.active { background: var(--amber); color: #2a1208; border-color: var(--amber); }
   .brief {
     background: var(--panel); border: 1px solid var(--wall); border-radius: 4px;
     padding: 6px 10px; margin-bottom: 6px; font-size: 0.7rem; color: var(--text-dim);
@@ -97,11 +97,11 @@
   svg { display: block; width: auto; height: 100%; max-width: 100%; max-height: 34vh; touch-action: manipulation; }
 
   body.night {
-    --amber-dim: #6b5822;
-    --wall: #747a5a;
+    --amber-dim: #6e5218;
+    --wall: #7a5a66;
   }
   body.night .room-wrap::after {
-    content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(120,140,90,0.04), rgba(0,0,0,0.4));
+    content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 40%, rgba(150,80,100,0.05), rgba(0,0,0,0.4));
     pointer-events: none; border-radius: 4px;
   }
   .door-hit { cursor: pointer; }
@@ -181,14 +181,14 @@
   .go-btn {
     width: 100%; padding: 12px; border-radius: 6px; border: none;
     font-family: var(--font-head); font-size: 0.92rem; letter-spacing: 0.08em;
-    background: var(--amber-dim); color: #2a2410; cursor: pointer;
+    background: var(--amber-dim); color: #2a1208; cursor: pointer;
     transition: background 0.2s ease, opacity 0.2s ease; flex-shrink: 0;
   }
   .go-btn.ready { background: var(--amber); cursor: pointer; }
   .go-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
   .overlay {
-    position: fixed; inset: 0; background: rgba(10,11,7,0.88);
+    position: fixed; inset: 0; background: rgba(16,6,9,0.9);
     display: flex; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity 0.25s ease; z-index: 10;
     padding: 20px;
@@ -299,7 +299,7 @@
 
   .skins-section { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--wall); }
   .knife-progress-card { display: flex; align-items: center; gap: 12px; background: var(--panel-2); border: 1px solid var(--wall); border-radius: 10px; padding: 10px 12px; margin-bottom: 16px; }
-  .knife-progress-img { width: 44px; height: 44px; border-radius: 8px; object-fit: contain; flex-shrink: 0; background: #47473f; padding: 3px; cursor: pointer; }
+  .knife-progress-img { width: 44px; height: 44px; border-radius: 8px; object-fit: contain; flex-shrink: 0; background: #4d3640; padding: 3px; cursor: pointer; }
   .knife-progress-card { cursor: pointer; }
   .knife-progress-body { flex: 1; min-width: 0; }
   .knife-progress-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
@@ -334,7 +334,7 @@
     text-align: center; max-width: 90%;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  #next-room-btn, #next-level-btn { background: var(--amber); color: #2a2410; border-color: var(--amber); }
+  #next-room-btn, #next-level-btn { background: var(--amber); color: #2a1208; border-color: var(--amber); }
 
   .celebration-card {
     background: var(--panel); border: 2px solid var(--amber); border-radius: 10px;
@@ -350,12 +350,12 @@
     color: var(--amber); text-transform: uppercase; margin-bottom: 10px;
   }
   .celebration-img-frame {
-    background: #47473f; border-radius: 10px; padding: 14px;
+    background: #4d3640; border-radius: 10px; padding: 14px;
     margin-bottom: 14px; display: flex; align-items: center; justify-content: center;
   }
   .celebration-img {
     width: 100%; max-height: 180px; object-fit: contain; margin-bottom: 0;
-    filter: drop-shadow(0 4px 14px rgba(201,162,74,0.35));
+    filter: drop-shadow(0 4px 14px rgba(226,185,74,0.35));
   }
   .celebration-title {
     font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; color: var(--text);
@@ -407,14 +407,14 @@
      le site web (jamais dans l'app Android ni dans Telegram, voir
      initCookieConsent() en fin de fichier). Masquée par défaut ; visible
      seulement si aucun choix n'a encore été enregistré. -->
-<div id="cookie-banner" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; background:#1e2117; border-top:1px solid #565c3f; padding:14px 16px; font-family:'Inter',system-ui,sans-serif; color:#e9e4d4; box-shadow:0 -4px 18px rgba(0,0,0,.35);">
+<div id="cookie-banner" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; background:#26131a; border-top:1px solid #7a3b4c; padding:14px 16px; font-family:'Inter',system-ui,sans-serif; color:#e9e4d4; box-shadow:0 -4px 18px rgba(0,0,0,.35);">
   <div style="max-width:760px; margin:0 auto; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;">
     <p style="margin:0; font-size:0.86rem; line-height:1.5; flex:1 1 260px; color:#e9e4d4;" data-i18n="cookieBannerText">
-      Ce site utilise des cookies publicitaires (Google AdSense) pour se financer. Vous pouvez les accepter ou les refuser — le site fonctionne dans les deux cas. Voir notre <a href="privacy.html" style="color:#c9a24a;">politique de confidentialité</a>.
+      Ce site utilise des cookies publicitaires (Google AdSense) pour se financer. Vous pouvez les accepter ou les refuser — le site fonctionne dans les deux cas. Voir notre <a href="privacy.html" style="color:#e2b94a;">politique de confidentialité</a>.
     </p>
     <div style="display:flex; gap:8px; flex:0 0 auto;">
-      <button id="cookie-decline-btn" type="button" style="background:transparent; border:1px solid #565c3f; color:#e9e4d4; border-radius:6px; padding:8px 14px; font-size:0.85rem; cursor:pointer;" data-i18n="cookieDecline">Refuser</button>
-      <button id="cookie-accept-btn" type="button" style="background:#c9a24a; border:1px solid #c9a24a; color:#14160f; font-weight:600; border-radius:6px; padding:8px 14px; font-size:0.85rem; cursor:pointer;" data-i18n="cookieAccept">Accepter</button>
+      <button id="cookie-decline-btn" type="button" style="background:transparent; border:1px solid #7a3b4c; color:#e9e4d4; border-radius:6px; padding:8px 14px; font-size:0.85rem; cursor:pointer;" data-i18n="cookieDecline">Refuser</button>
+      <button id="cookie-accept-btn" type="button" style="background:#e2b94a; border:1px solid #e2b94a; color:#2a1208; font-weight:600; border-radius:6px; padding:8px 14px; font-size:0.85rem; cursor:pointer;" data-i18n="cookieAccept">Accepter</button>
     </div>
   </div>
 </div>
@@ -441,7 +441,7 @@
     <div class="menu-scroll">
       <button class="compose-btn" id="menu-compose-btn" data-i18n="composeSquads" style="width:100%; margin-bottom:16px;">Composer les escouades</button>
 
-      <div class="brief" style="margin-bottom:14px;">
+      <div class="brief" style="margin-bottom:14px;" data-i18n="missionPickHint">
         Choisis une mission. Ta composition d'escouade reste la même d'une mission à l'autre.
       </div>
       <div class="level-list" id="level-list"></div>
@@ -739,6 +739,7 @@ function bootGame() {
     fr: {
       tagline: 'Unité tactique',
       composeSquads: 'Composer les escouades',
+      missionPickHint: "Choisis une mission. Ta composition d'escouade reste la même d'une mission à l'autre.",
       accessibility: 'Accessibilité',
       colorblindMode: 'Mode daltonien',
       largeTextMode: 'Texte agrandi',
@@ -807,8 +808,8 @@ function bootGame() {
       missionSuccessTitle: 'Mission réussie',
       newBestScoreLabel: 'Nouveau meilleur score !',
       replayLevel: 'Rejouer le niveau',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Ce site utilise des cookies publicitaires (Google AdSense) pour se financer. Vous pouvez les accepter ou les refuser — le site fonctionne dans les deux cas. Voir notre <a href=\"privacy.html\" style=\"color:#c9a24a;\">politique de confidentialité</a>.',
+      gameSubtitle: "Braquage",
+      cookieBannerText: 'Ce site utilise des cookies publicitaires (Google AdSense) pour se financer. Vous pouvez les accepter ou les refuser — le site fonctionne dans les deux cas. Voir notre <a href=\"privacy.html\" style=\"color:#e2b94a;\">politique de confidentialité</a>.',
       cookieDecline: 'Refuser',
       cookieAccept: 'Accepter',
       backToMenuShort: '← Menu',
@@ -851,6 +852,7 @@ function bootGame() {
     en: {
       tagline: 'Tactical Unit',
       composeSquads: 'Build your squads',
+      missionPickHint: "Pick a mission. Your squad lineup stays the same from one mission to the next.",
       accessibility: 'Accessibility',
       colorblindMode: 'Colorblind mode',
       largeTextMode: 'Large text',
@@ -920,7 +922,7 @@ function bootGame() {
       newBestScoreLabel: 'New best score!',
       replayLevel: 'Replay level',
       gameSubtitle: "Heist",
-      cookieBannerText: 'This site uses advertising cookies (Google AdSense) to stay funded. You can accept or decline them — the site works either way. See our <a href=\"privacy.html\" style=\"color:#c9a24a;\">privacy policy</a>.',
+      cookieBannerText: 'This site uses advertising cookies (Google AdSense) to stay funded. You can accept or decline them — the site works either way. See our <a href=\"privacy.html\" style=\"color:#e2b94a;\">privacy policy</a>.',
       cookieDecline: 'Decline',
       cookieAccept: 'Accept',
       backToMenuShort: '← Menu',
@@ -963,6 +965,7 @@ function bootGame() {
     es: {
       tagline: 'Unidad táctica',
       composeSquads: 'Formar los escuadrones',
+      missionPickHint: "Elige una misión. La composición de tu escuadrón es la misma en todas las misiones.",
       accessibility: 'Accesibilidad',
       colorblindMode: 'Modo daltónico',
       largeTextMode: 'Texto grande',
@@ -1031,8 +1034,8 @@ function bootGame() {
       missionSuccessTitle: 'Misión exitosa',
       newBestScoreLabel: '¡Nuevo mejor puntaje!',
       replayLevel: 'Rejugar nivel',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Este sitio usa cookies publicitarias (Google AdSense) para financiarse. Puedes aceptarlas o rechazarlas — el sitio funciona en ambos casos. Consulta nuestra <a href=\"privacy.html\" style=\"color:#c9a24a;\">política de privacidad</a>.',
+      gameSubtitle: "Atraco",
+      cookieBannerText: 'Este sitio usa cookies publicitarias (Google AdSense) para financiarse. Puedes aceptarlas o rechazarlas — el sitio funciona en ambos casos. Consulta nuestra <a href=\"privacy.html\" style=\"color:#e2b94a;\">política de privacidad</a>.',
       cookieDecline: 'Rechazar',
       cookieAccept: 'Aceptar',
       backToMenuShort: '← Menú',
@@ -1075,6 +1078,7 @@ function bootGame() {
     ptbr: {
       tagline: 'Unidade tática',
       composeSquads: 'Montar os esquadrões',
+      missionPickHint: "Escolha uma missão. A composição do seu esquadrão é a mesma em todas as missões.",
       accessibility: 'Acessibilidade',
       colorblindMode: 'Modo daltônico',
       largeTextMode: 'Texto grande',
@@ -1143,8 +1147,8 @@ function bootGame() {
       missionSuccessTitle: 'Missão bem-sucedida',
       newBestScoreLabel: 'Nova melhor pontuação!',
       replayLevel: 'Repetir nível',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Este site usa cookies publicitários (Google AdSense) para se financiar. Você pode aceitá-los ou recusá-los — o site funciona nos dois casos. Veja nossa <a href=\"privacy.html\" style=\"color:#c9a24a;\">política de privacidade</a>.',
+      gameSubtitle: "Golpe",
+      cookieBannerText: 'Este site usa cookies publicitários (Google AdSense) para se financiar. Você pode aceitá-los ou recusá-los — o site funciona nos dois casos. Veja nossa <a href=\"privacy.html\" style=\"color:#e2b94a;\">política de privacidade</a>.',
       cookieDecline: 'Recusar',
       cookieAccept: 'Aceitar',
       backToMenuShort: '← Menu',
@@ -1187,6 +1191,7 @@ function bootGame() {
     de: {
       tagline: 'Taktische Einheit',
       composeSquads: 'Trupps zusammenstellen',
+      missionPickHint: "Wähle eine Mission. Deine Truppenaufstellung bleibt von Mission zu Mission gleich.",
       accessibility: 'Barrierefreiheit',
       colorblindMode: 'Farbenblind-Modus',
       largeTextMode: 'Große Schrift',
@@ -1255,8 +1260,8 @@ function bootGame() {
       missionSuccessTitle: 'Mission erfolgreich',
       newBestScoreLabel: 'Neuer Bestwert!',
       replayLevel: 'Level wiederholen',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Diese Website verwendet Werbe-Cookies (Google AdSense) zur Finanzierung. Sie können sie akzeptieren oder ablehnen — die Website funktioniert in beiden Fällen. Siehe unsere <a href=\"privacy.html\" style=\"color:#c9a24a;\">Datenschutzerklärung</a>.',
+      gameSubtitle: "Raubzug",
+      cookieBannerText: 'Diese Website verwendet Werbe-Cookies (Google AdSense) zur Finanzierung. Sie können sie akzeptieren oder ablehnen — die Website funktioniert in beiden Fällen. Siehe unsere <a href=\"privacy.html\" style=\"color:#e2b94a;\">Datenschutzerklärung</a>.',
       cookieDecline: 'Ablehnen',
       cookieAccept: 'Akzeptieren',
       backToMenuShort: '← Menü',
@@ -1299,6 +1304,7 @@ function bootGame() {
     it: {
       tagline: 'Unità tattica',
       composeSquads: 'Componi le squadre',
+      missionPickHint: "Scegli una missione. La composizione della tua squadra resta la stessa da una missione all'altra.",
       accessibility: 'Accessibilità',
       colorblindMode: 'Modalità daltonici',
       largeTextMode: 'Testo grande',
@@ -1367,8 +1373,8 @@ function bootGame() {
       missionSuccessTitle: 'Missione riuscita',
       newBestScoreLabel: 'Nuovo record!',
       replayLevel: 'Rigioca livello',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Questo sito utilizza cookie pubblicitari (Google AdSense) per finanziarsi. Puoi accettarli o rifiutarli — il sito funziona in entrambi i casi. Consulta la nostra <a href=\"privacy.html\" style=\"color:#c9a24a;\">informativa sulla privacy</a>.',
+      gameSubtitle: "Rapina",
+      cookieBannerText: 'Questo sito utilizza cookie pubblicitari (Google AdSense) per finanziarsi. Puoi accettarli o rifiutarli — il sito funziona in entrambi i casi. Consulta la nostra <a href=\"privacy.html\" style=\"color:#e2b94a;\">informativa sulla privacy</a>.',
       cookieDecline: 'Rifiuta',
       cookieAccept: 'Accetta',
       backToMenuShort: '← Menu',
@@ -1411,6 +1417,7 @@ function bootGame() {
     ru: {
       tagline: 'Тактическое подразделение',
       composeSquads: 'Сформировать отряды',
+      missionPickHint: "Выберите миссию. Состав вашего отряда остаётся прежним от миссии к миссии.",
       accessibility: 'Специальные возможности',
       colorblindMode: 'Режим для дальтоников',
       largeTextMode: 'Крупный текст',
@@ -1479,8 +1486,8 @@ function bootGame() {
       missionSuccessTitle: 'Миссия выполнена',
       newBestScoreLabel: 'Новый рекорд!',
       replayLevel: 'Переиграть уровень',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'Этот сайт использует рекламные cookie-файлы (Google AdSense) для финансирования. Вы можете принять их или отказаться — сайт работает в обоих случаях. См. нашу <a href=\"privacy.html\" style=\"color:#c9a24a;\">политику конфиденциальности</a>.',
+      gameSubtitle: "Ограбление",
+      cookieBannerText: 'Этот сайт использует рекламные cookie-файлы (Google AdSense) для финансирования. Вы можете принять их или отказаться — сайт работает в обоих случаях. См. нашу <a href=\"privacy.html\" style=\"color:#e2b94a;\">политику конфиденциальности</a>.',
       cookieDecline: 'Отказаться',
       cookieAccept: 'Принять',
       backToMenuShort: '← Меню',
@@ -1523,6 +1530,7 @@ function bootGame() {
     ja: {
       tagline: 'タクティカルユニット',
       composeSquads: 'スクワッドを編成',
+      missionPickHint: "ミッションを選んでください。分隊の編成はミッションが変わっても同じです。",
       accessibility: 'アクセシビリティ',
       colorblindMode: 'カラーユニバーサルモード',
       largeTextMode: '文字を大きくする',
@@ -1591,8 +1599,8 @@ function bootGame() {
       missionSuccessTitle: 'ミッション成功',
       newBestScoreLabel: '新記録！',
       replayLevel: 'レベルをリプレイ',
-      gameSubtitle: "Heist",
-      cookieBannerText: 'このサイトは運営資金のために広告Cookie（Google AdSense）を使用しています。同意しても拒否してもサイトは利用できます。詳細は<a href=\"privacy.html\" style=\"color:#c9a24a;\">プライバシーポリシー</a>をご覧ください。',
+      gameSubtitle: "強盗",
+      cookieBannerText: 'このサイトは運営資金のために広告Cookie（Google AdSense）を使用しています。同意しても拒否してもサイトは利用できます。詳細は<a href=\"privacy.html\" style=\"color:#e2b94a;\">プライバシーポリシー</a>をご覧ください。',
       cookieDecline: '拒否',
       cookieAccept: '同意する',
       backToMenuShort: '← メニュー',
@@ -1635,6 +1643,7 @@ function bootGame() {
     ko: {
       tagline: '전술 유닛',
       composeSquads: '분대 편성',
+      missionPickHint: "미션을 선택하세요. 분대 구성은 미션이 바뀌어도 그대로 유지됩니다.",
       accessibility: '접근성',
       colorblindMode: '색맹 모드',
       largeTextMode: '큰 글씨',
@@ -1703,8 +1712,8 @@ function bootGame() {
       missionSuccessTitle: '임무 성공',
       newBestScoreLabel: '신기록!',
       replayLevel: '레벨 다시 플레이',
-      gameSubtitle: "Heist",
-      cookieBannerText: '이 사이트는 운영 자금을 위해 광고 쿠키(Google AdSense)를 사용합니다. 수락하거나 거부해도 사이트는 정상적으로 작동합니다. 자세한 내용은 <a href=\"privacy.html\" style=\"color:#c9a24a;\">개인정보처리방침</a>을 참고하세요.',
+      gameSubtitle: "강도",
+      cookieBannerText: '이 사이트는 운영 자금을 위해 광고 쿠키(Google AdSense)를 사용합니다. 수락하거나 거부해도 사이트는 정상적으로 작동합니다. 자세한 내용은 <a href=\"privacy.html\" style=\"color:#e2b94a;\">개인정보처리방침</a>을 참고하세요.',
       cookieDecline: '거부',
       cookieAccept: '수락',
       backToMenuShort: '← 메뉴',
@@ -1747,6 +1756,7 @@ function bootGame() {
     zh: {
       tagline: '战术小队',
       composeSquads: '编组小队',
+      missionPickHint: "选择一个任务。你的小队编成在各个任务之间保持不变。",
       accessibility: '无障碍设置',
       colorblindMode: '色盲模式',
       largeTextMode: '大字体',
@@ -1815,8 +1825,8 @@ function bootGame() {
       missionSuccessTitle: '任务成功',
       newBestScoreLabel: '刷新最佳纪录！',
       replayLevel: '重玩关卡',
-      gameSubtitle: "Heist",
-      cookieBannerText: '本网站使用广告Cookie（Google AdSense）以维持运营。您可以接受或拒绝，网站在两种情况下均可正常使用。详情请参阅我们的<a href=\"privacy.html\" style=\"color:#c9a24a;\">隐私政策</a>。',
+      gameSubtitle: "劫案",
+      cookieBannerText: '本网站使用广告Cookie（Google AdSense）以维持运营。您可以接受或拒绝，网站在两种情况下均可正常使用。详情请参阅我们的<a href=\"privacy.html\" style=\"color:#e2b94a;\">隐私政策</a>。',
       cookieDecline: '拒绝',
       cookieAccept: '接受',
       backToMenuShort: '← 菜单',
@@ -2276,10 +2286,10 @@ function bootGame() {
   // Camouflage par environnement — codes validés pour la production.
   // "text" est choisi selon le contraste (clair sur camo foncé, foncé sur camo clair).
   const CAMO_PALETTES = {
-    urbain:   { dark: '#16171b', mid: '#2a2c33', light: '#c9a24a', outline: '#0b0b0d', text: '#ece8de' },
-    desert:   { dark: '#16171b', mid: '#2a2c33', light: '#c9a24a', outline: '#0b0b0d', text: '#ece8de' },
-    jungle:   { dark: '#16171b', mid: '#2a2c33', light: '#c9a24a', outline: '#0b0b0d', text: '#ece8de' },
-    arctique: { dark: '#16171b', mid: '#2a2c33', light: '#c9a24a', outline: '#0b0b0d', text: '#ece8de' },
+    urbain:   { dark: '#1a0f13', mid: '#32202a', light: '#e2b94a', outline: '#0b0b0d', text: '#ece8de' },
+    desert:   { dark: '#1a0f13', mid: '#32202a', light: '#e2b94a', outline: '#0b0b0d', text: '#ece8de' },
+    jungle:   { dark: '#1a0f13', mid: '#32202a', light: '#e2b94a', outline: '#0b0b0d', text: '#ece8de' },
+    arctique: { dark: '#1a0f13', mid: '#32202a', light: '#e2b94a', outline: '#0b0b0d', text: '#ece8de' },
   };
   // Shadow ignore le camouflage : une seule tenue noire intégrale, peu importe l'environnement.
   const SHADOW_PALETTE = { dark: '#000000', mid: '#111111', light: '#6d1426', outline: '#000000', text: '#ece8de' };
@@ -4150,7 +4160,7 @@ const LEVEL_I18N = {"en": {"1": {"name": "Level 1 · Bank Branch", "sub": "Easy 
   // Palettes de plancher/mur par environnement — donne à chaque famille de
   // camouflage sa propre ambiance de pièce, plutôt qu'un même vert olive partout.
   const ROOM_PALETTES = {
-    urbain:   { floor: '#2b323b', wall: '#4b5563' },
+    urbain:   { floor: '#2f2228', wall: '#5c4a54' },
     desert:   { floor: '#3a3631', wall: '#6a6050' },
     jungle:   { floor: '#243628', wall: '#3f5f48' },
     arctique: { floor: '#28323f', wall: '#4d6480' },
@@ -4773,7 +4783,7 @@ const LEVEL_I18N = {"en": {"1": {"name": "Level 1 · Bank Branch", "sub": "Easy 
     { nameKey: 'skinVault', slug: 'vault', req: 15, img: './skin-vault.jpg', color: '#8b9299' },
     { nameKey: 'skinCasino', slug: 'casino', req: 25, img: './skin-casino.jpg', color: '#1f6b3a' },
     { nameKey: 'skinLegion', slug: 'legion', req: 35, img: './skin-legion.jpg', color: '#6d1426' },
-    { nameKey: 'skinGold', slug: 'gold', req: 50, img: './skin-gold.jpg', color: '#d4af37' },
+    { nameKey: 'skinGold', slug: 'gold', req: 50, img: './skin-gold.jpg', color: '#e2b94a' },
   ];
   // Le skin AK le plus haut déjà débloqué s'affiche automatiquement sur l'arme
   // de l'Assault en mission (couleur) et sur le portrait de briefing (image

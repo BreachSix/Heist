@@ -1,0 +1,17 @@
+{
+  "name": "BreachSix: Heist",
+  "short_name": "Heist",
+  "description": "Jeu tactique de braquage — planifie l'assaut, dirige tes escouades de la Vorona Legion.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#101115",
+  "theme_color": "#14151a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

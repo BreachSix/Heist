@@ -1,0 +1,10 @@
+BreachSix: Heist — premier jet jouable (copie isolée, Dead Sector intact)
+
+À FAIRE AVANT PUBLICATION
+1. Monetag : la zone de Dead Sector (11985754) a été retirée. Créer une app/zone Heist, réinsérer le tag dans <head> et renseigner MONETAG_SHOW_FN / MONETAG_INTERSTITIAL_FN (actuellement 'show_HEIST_A_CONFIGURER' -> pubs récompensées désactivées proprement).
+2. Portraits op-assault-<skin>.jpg : seul Crimson est réel. arctic, vault, casino, legion, gold sont des copies provisoires de op-assault.jpg (à remplacer par les 5 rendus d'opérateur).
+3. icon-192.png / icon-512.png : icône B bourgogne et or (finale). Bannières à créer.
+4. Lien Telegram (t.me/BreachSixGameBot) et clés Telegram : à confirmer pour Heist.
+5. Sons : laser, encre et flashbang = vrais échantillons (provisoires, remplaçables par de vrais échantillons au même nom).
+Service worker : cache heist-v2 (incrémenter CACHE_VERSION à chaque mise à jour).
+Clés localStorage : préfixe breachsix-heist- (aucune collision avec Dead Sector).
